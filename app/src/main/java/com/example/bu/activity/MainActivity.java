@@ -3,11 +3,13 @@ package com.example.bu.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bu.R;
+import com.example.bu.webview.MyWebViewClient;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
-    private WebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         fab = findViewById(R.id.fab);
         drawer = findViewById(R.id.drawer_layout);
-        mWebView = findViewById(R.id.web_main);
+
 
         setSupportActionBar(toolbar);
         tv_main_profile.setText("yren@ubishops.ca");
@@ -69,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
