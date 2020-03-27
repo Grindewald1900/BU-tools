@@ -21,8 +21,9 @@
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-    </include>
-
-
+        <WebView
+            android:id="@+id/web_main"
+            />
+    </>
 
 </androidx.drawerlayout.widget.DrawerLayout>
