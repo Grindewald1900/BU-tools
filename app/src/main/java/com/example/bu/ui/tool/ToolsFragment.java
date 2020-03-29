@@ -1,4 +1,4 @@
-package com.example.bu.ui.slideshow;
+package com.example.bu.ui.tool;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.bu.R;
 
-public class SlideshowFragment extends Fragment {
+public class ToolsFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private ToolsViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        toolsViewModel =
+                ViewModelProviders.of(this).get(ToolsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_tools, container, false);
+        final TextView textView = root.findViewById(R.id.text_gallery);
+        toolsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
