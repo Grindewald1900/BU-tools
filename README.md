@@ -5,7 +5,7 @@ Some useful tools for students of BU
 Yi Ren   Wentao Lu
 
 ## Functions
-**(1) Map and Location
-**(2) Check the scheule of gym
-**(3) Register & Login
-**(4) 
+**(1) Map and Location**  
+**(2) Check the scheule of gym**  
+**(3) Register & Login**  
+**(4) Other useful tools**  
