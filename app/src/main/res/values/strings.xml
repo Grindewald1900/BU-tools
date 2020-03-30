@@ -19,10 +19,18 @@
     <!-- Key -->
     <string name="google_map_key">AIzaSyCHFbT6FOwbqaEMQVSQzr0hWag7ovhsPBI</string>
 
+    <!-- Location -->
+    <string name="lon_main">lon_main</string>
+    <string name="lat_main">lat_main</string>
+
     <!-- Others -->
     <string name="home_second">Home Second</string>
     <string name="demo_user_mail">yren@ubishops.ca</string>
     <string name="goto_map">Goto Map</string>
+    <string name="title_welcome_one">Campus map</string>
+    <string name="title_welcome_two">Gym schedule</string>
+    <string name="title_welcome_three">Useful tools</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

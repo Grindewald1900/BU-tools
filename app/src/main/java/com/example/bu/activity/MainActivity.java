@@ -14,6 +14,7 @@ import com.example.bu.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.stephentuso.welcome.WelcomeHelper;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -34,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    WelcomeHelper welcomeHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        welcomeHelper = new WelcomeHelper(this,StartActivity.class);
+        welcomeHelper.show(savedInstanceState);
         initView();
 
     }
@@ -112,6 +117,12 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        welcomeHelper.onSaveInstanceState(outState);
     }
 
 

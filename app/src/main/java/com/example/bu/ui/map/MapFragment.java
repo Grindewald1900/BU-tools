@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.bu.R;
+import com.example.bu.activity.InitActivity;
 import com.example.bu.activity.MapsActivity;
 import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheetListItemView;
 
@@ -41,7 +42,7 @@ public class MapFragment extends Fragment {
         mBtGoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().startActivity(new Intent(mContext, MapsActivity.class));
+                getActivity().startActivity(new Intent(mContext, InitActivity.class));
             }
         });
 //        bottomSheetListItemView = root.findViewById(R.id.fg_map_list);
