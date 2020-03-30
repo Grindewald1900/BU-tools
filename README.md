@@ -8,4 +8,13 @@ Yi Ren   Wentao Lu
 **(1) Map and Location**  
 **(2) Check the scheule of gym**  
 **(3) Register & Login**  
-**(4) Other useful tools**  
+**(4) Other useful tools**
+
+## Screenshots  
+
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s1.png" width="40%" height="30%"></div>   
+<br></br>
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s2.png" width="40%" height="30%"></div>  
+<br></br>
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s3.png" width="40%" height="30%"></div>  
+
