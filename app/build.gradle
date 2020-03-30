@@ -26,6 +26,9 @@ android {
 dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.qmuiteam:qmui:2.0.0-alpha04'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

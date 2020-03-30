@@ -8,4 +8,6 @@
     <dimen name="user_logo">50dp</dimen>
     <dimen name="padding_20">20dp</dimen>
     <dimen name="text_size_20">20sp</dimen>
+    <dimen name="dimen_button_width">200dp</dimen>
+    <dimen name="dimen_button_height">80dp</dimen>
 </resources>

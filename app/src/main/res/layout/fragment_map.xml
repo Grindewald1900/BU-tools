@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Map.MapFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bk_bu_map"
+    tools:context=".ui.map.MapFragment">
+    <Button
+        android:id="@+id/bt_map_goto"
+        android:layout_width="@dimen/dimen_button_width"
+        android:layout_height="@dimen/dimen_button_height"
+        android:layout_marginTop="@dimen/dimen_button_height"
+        android:text="@string/goto_map"
+        android:textSize="@dimen/qmui_btn_text_size"
+        android:gravity="center"
+        android:background="@color/qmui_config_color_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

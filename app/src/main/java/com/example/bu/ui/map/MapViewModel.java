@@ -1,4 +1,4 @@
-package com.example.bu.ui.Map;
+package com.example.bu.ui.map;
 
 import androidx.lifecycle.ViewModel;
 

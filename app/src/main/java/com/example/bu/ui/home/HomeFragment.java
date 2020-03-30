@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
-        mWebView.loadUrl("https://www.ubishops.ca/");
+        mWebView.loadUrl("https://" + getActivity().getResources().getString(R.string.url_bu_main));
 
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

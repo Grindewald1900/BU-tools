@@ -12,12 +12,19 @@
     <string name="menu_sports">sports</string>
     <string name="menu_tools">tools</string>
 
-<!--    <string name="menu_gallery">Sports Center</string>-->
-<!--    <string name="menu_slideshow">Tools</string>-->
 
+    <!-- URL -->
+    <string name="url_bu_main">www.ubishops.ca/</string>
+
+    <!-- Key -->
+    <string name="google_map_key">AIzaSyCHFbT6FOwbqaEMQVSQzr0hWag7ovhsPBI</string>
+
+    <!-- Others -->
     <string name="home_second">Home Second</string>
-    <string name="demo_user_mail"></string>
+    <string name="demo_user_mail">yren@ubishops.ca</string>
+    <string name="goto_map">Goto Map</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
