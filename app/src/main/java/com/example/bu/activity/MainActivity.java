@@ -1,5 +1,7 @@
 package com.example.bu.activity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -15,9 +17,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.stephentuso.welcome.WelcomeHelper;
+import com.yanzhenjie.permission.Action;
+import com.yanzhenjie.permission.AndPermission;
+import com.yanzhenjie.permission.runtime.Permission;
+import com.yanzhenjie.permission.runtime.PermissionDef;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,6 +34,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         welcomeHelper = new WelcomeHelper(this,StartActivity.class);
         welcomeHelper.show(savedInstanceState);
         initView();
-
+        requestPermission(Permission.ACCESS_FINE_LOCATION);
     }
 
     private void initView(){
@@ -125,11 +136,27 @@ public class MainActivity extends AppCompatActivity {
         welcomeHelper.onSaveInstanceState(outState);
     }
 
+    private void requestPermission(@PermissionDef String... permissions){
+        AndPermission.with(this)
+                .runtime()
+                .permission(permissions)
+                .onGranted(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> data) {
+                        toast(R.string.permission_success);
+                    }
+                })
+                .onDenied(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> data) {
+                        toast(R.string.permission_fail);
+                    }
+                })
+                .start();
+    }
 
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
+    protected void toast(@StringRes int message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
 }

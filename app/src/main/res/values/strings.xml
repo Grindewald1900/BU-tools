@@ -30,6 +30,8 @@
     <string name="title_welcome_one">Campus map</string>
     <string name="title_welcome_two">Gym schedule</string>
     <string name="title_welcome_three">Useful tools</string>
+    <string name="permission_success">Success!</string>
+    <string name="permission_fail">Fail!</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

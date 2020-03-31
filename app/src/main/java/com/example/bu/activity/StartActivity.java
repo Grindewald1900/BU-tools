@@ -20,7 +20,7 @@ public class StartActivity extends WelcomeActivity  {
         .page(new TitlePage(R.drawable.bk_bu_sports,
         getResources().getString(R.string.title_welcome_two))
         )
-        .page(new TitlePage(R.drawable.icon_tools,
+        .page(new TitlePage(R.drawable.bk_bu_tools,
         getResources().getString(R.string.title_welcome_three))
         )
         .swipeToDismiss(true).canSkip(true)

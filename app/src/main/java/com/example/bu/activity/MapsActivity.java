@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.example.bu.R;
+import com.example.bu.tool.LocationConfig;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -12,9 +13,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import net.grandcentrix.tray.AppPreferences;
+
+import java.util.Objects;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private AppPreferences appPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        appPreferences = new LocationConfig(this).getAppPreferences();
     }
 
 
@@ -39,10 +46,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        double lat = Double.parseDouble(Objects.requireNonNull(appPreferences.getString("lat_main", "45.364387")));
+        double lon = Double.parseDouble(Objects.requireNonNull(appPreferences.getString("lon_main","-71.845109")));
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng bu = new LatLng(lat, lon);
+        mMap.addMarker(new MarkerOptions().position(bu).title("Bishop's University"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(bu));
     }
+
 }
