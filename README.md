@@ -5,8 +5,10 @@ Some useful tools for students of BU
 Yi Ren   Wentao Lu
 
 ## Functions
-**(1) Map and Location:** select a certain building in the list and the map will find the way to it, you'll never get lost in our campus!   
-**(2) Check the scheule of gym**  get the schedule of our gym activities, such as basketball training, open swim and SRC soccer.  
+**(1) Map and Location:**   
+&ensp; &ensp;  Select a certain building in the list and the map will find the way to it, you'll never get lost in our campus!   
+**(2) Check the scheule of gym:**   
+&ensp; &ensp;  Get the schedule of our gym activities, such as basketball training, open swim and SRC soccer.  
 **(3) Register & Login**  
 **(4) Other useful tools**
 
