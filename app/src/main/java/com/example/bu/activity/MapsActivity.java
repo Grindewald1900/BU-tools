@@ -6,11 +6,13 @@ import android.os.Bundle;
 
 import com.example.bu.R;
 import com.example.bu.tool.LocationConfig;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import net.grandcentrix.tray.AppPreferences;
@@ -51,8 +53,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng bu = new LatLng(lat, lon);
-        mMap.addMarker(new MarkerOptions().position(bu).title("Bishop's University"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(bu));
+        mMap.addMarker(new MarkerOptions().position(bu).title("Bishop's University").snippet("Location: main campus")).showInfoWindow();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bu,15.0f));
     }
 
 }

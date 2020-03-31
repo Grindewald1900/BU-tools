@@ -26,12 +26,14 @@
     <!-- Others -->
     <string name="home_second">Home Second</string>
     <string name="demo_user_mail">yren@ubishops.ca</string>
-    <string name="goto_map">Goto Map</string>
+    <string name="goto_map">Go to Map</string>
     <string name="title_welcome_one">Campus map</string>
     <string name="title_welcome_two">Gym schedule</string>
     <string name="title_welcome_three">Useful tools</string>
     <string name="permission_success">Success!</string>
     <string name="permission_fail">Fail!</string>
+    <string name="select_location">Select a location ↓</string>
+    <string name="No_destination">No destination chosen</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

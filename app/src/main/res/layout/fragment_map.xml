@@ -5,20 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bk_bu_map"
+    android:background="@drawable/bk_bu_map3"
     tools:context=".ui.map.MapFragment">
-    <Button
-        android:id="@+id/bt_map_goto"
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_map_location"
         android:layout_width="@dimen/dimen_button_width"
-        android:layout_height="@dimen/dimen_button_height"
-        android:layout_marginTop="@dimen/dimen_button_height"
-        android:text="@string/goto_map"
-        android:textSize="@dimen/qmui_btn_text_size"
-        android:gravity="center"
-        android:background="@color/qmui_config_color_white"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:text="@string/select_location"
+        android:textColor="@color/colorPrimary"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/qmui_config_color_white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-         />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_map1"
+        android:layout_width="@dimen/dimen_240"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/dimen_button_height"
+        app:layout_constraintTop_toBottomOf="@+id/bt_map_location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_map2"
+        android:layout_width="@dimen/dimen_240"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintTop_toBottomOf="@+id/spin_map1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_map3"
+        android:layout_width="@dimen/dimen_240"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintTop_toBottomOf="@+id/spin_map2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_map4"
+        android:layout_width="@dimen/dimen_240"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintTop_toBottomOf="@+id/spin_map3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_map_result"
+        android:layout_width="@dimen/dimen_button_width"
+        android:layout_height="@dimen/dimen_50"
+        android:text="@string/No_destination"
+        android:textColor="@color/purple_1"
+        android:layout_marginTop="@dimen/dimen_50"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/qmui_config_color_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin_map4"
+        />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_map_goto"
+        android:layout_width="@dimen/dimen_button_width"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginBottom="210dp"
+        android:text="@string/goto_map"
+        android:textColor="@color/colorPrimary"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/qmui_config_color_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
