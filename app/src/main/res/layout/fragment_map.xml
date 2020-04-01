@@ -13,6 +13,7 @@
         android:layout_height="@dimen/dimen_50"
         android:layout_marginTop="@dimen/dimen_50"
         android:text="@string/select_location"
+        android:textSize="@dimen/qmui_btn_text_size"
         android:textColor="@color/colorPrimary"
         app:qmui_borderColor="@color/qmui_config_color_white"
         app:qmui_backgroundColor="@color/qmui_config_color_white"
@@ -75,6 +76,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spin_map4"
         />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_50"
+        android:src="@drawable/icon_arrow_down"
+        app:layout_constraintTop_toBottomOf="@+id/bt_map_result"
+        app:layout_constraintBottom_toTopOf="@+id/bt_map_goto"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
         android:id="@+id/bt_map_goto"
@@ -83,6 +93,7 @@
         android:layout_marginBottom="210dp"
         android:text="@string/goto_map"
         android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/qmui_btn_text_size"
         app:qmui_borderColor="@color/qmui_config_color_white"
         app:qmui_backgroundColor="@color/qmui_config_color_white"
         app:layout_constraintLeft_toLeftOf="parent"

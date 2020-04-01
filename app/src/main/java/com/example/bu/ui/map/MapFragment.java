@@ -23,6 +23,7 @@ import com.example.bu.activity.InitActivity;
 import com.example.bu.activity.MapsActivity;
 import com.example.bu.tool.ColorStateListMaker;
 import com.example.bu.tool.LocationConfig;
+import com.example.bu.tool.StringUtils;
 import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheetListItemView;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
@@ -60,18 +61,64 @@ public class MapFragment extends Fragment {
         niceSpinner3 = root.findViewById(R.id.spin_map3);
         niceSpinner4 = root.findViewById(R.id.spin_map4);
 
-        List<String> dataset1 = new LinkedList<>(Arrays.asList("ACADEMIC BUILDINGS","1-Astronomical Observatory","2-Bandeen Hall","3-Library Learning Commons","4-Centennial Theatre","5-Champlain College (CEGEP)","6-Cormier Centre (Dobson-Lagasse)",
-                "7-Bishop Williams Hall","8-Foreman Art Gallery","9-Hamilton Building","10-Johnson Science Building","11-Marjorie Donald House (The SUB)","12-McGreer (Administration - Academic Offices)","13-Molson Fine Arts Building",
-                "14-Morris House","15-Nicolls Arts Building","16-Turner Studio Theatre"));
-        List<String> dataset2 = new LinkedList<>(Arrays.asList("SERVICES","1-Buildings & Grounds","2-Coulter Field","3-Golf Course","4-Hangar","5-Health Services","6-John H. Price Sports Centre","7-Panda Daycare",
-                "8-Security","9-St. Mark's Chapel","10-University Bookstore","11-W.B. Scott Arena and Outdoor Pool"));
-        List<String> dataset3 = new LinkedList<>(Arrays.asList("DINING FACILITIES"," Adam's Dining Room","2-Dewhurst Dining Hall","3-The Bus Stop Cafe","4-Tim Horton's","5-Gaiter Grill & Quiznos","6-Sport Center Coffee Shop"));
-        List<String> dataset4 = new LinkedList<>(Arrays.asList(" RESIDENCES BUILDINGS","Abbott Residence","2-Kuehner Residence","3-Mackinnon Residence","4-Munster Residence","5-Norton Pollack Residence","6-Paterson Hall"));
+        List<String> dataset1 = new LinkedList<>(Arrays.asList("ACADEMIC BUILDINGS",
+                StringUtils.getString(mContext,R.string.A1),
+                StringUtils.getString(mContext,R.string.A2),
+                StringUtils.getString(mContext,R.string.A3),
+                StringUtils.getString(mContext,R.string.A4),
+                StringUtils.getString(mContext,R.string.A5),
+                StringUtils.getString(mContext,R.string.A6),
+                StringUtils.getString(mContext,R.string.A7),
+                StringUtils.getString(mContext,R.string.A8),
+                StringUtils.getString(mContext,R.string.A9),
+                StringUtils.getString(mContext,R.string.A10),
+                StringUtils.getString(mContext,R.string.A11),
+                StringUtils.getString(mContext,R.string.A12),
+                StringUtils.getString(mContext,R.string.A13),
+                StringUtils.getString(mContext,R.string.A14),
+                StringUtils.getString(mContext,R.string.A15),
+                StringUtils.getString(mContext,R.string.A16)));
+
+        List<String> dataset2 = new LinkedList<>(Arrays.asList("SERVICES",
+                StringUtils.getString(mContext,R.string.B1),
+                StringUtils.getString(mContext,R.string.B2),
+                StringUtils.getString(mContext,R.string.B3),
+                StringUtils.getString(mContext,R.string.B4),
+                StringUtils.getString(mContext,R.string.B5),
+                StringUtils.getString(mContext,R.string.B6),
+                StringUtils.getString(mContext,R.string.B7),
+                StringUtils.getString(mContext,R.string.B8),
+                StringUtils.getString(mContext,R.string.B9),
+                StringUtils.getString(mContext,R.string.B10),
+                StringUtils.getString(mContext,R.string.B11)
+                ));
+
+        List<String> dataset3 = new LinkedList<>(Arrays.asList("DINING FACILITIES",
+                StringUtils.getString(mContext,R.string.C1),
+                StringUtils.getString(mContext,R.string.C2),
+                StringUtils.getString(mContext,R.string.C3),
+                StringUtils.getString(mContext,R.string.C4),
+                StringUtils.getString(mContext,R.string.C5),
+                StringUtils.getString(mContext,R.string.C6)
+                ));
+
+        List<String> dataset4 = new LinkedList<>(Arrays.asList(" RESIDENCES BUILDINGS",
+                StringUtils.getString(mContext,R.string.D1),
+                StringUtils.getString(mContext,R.string.D2),
+                StringUtils.getString(mContext,R.string.D3),
+                StringUtils.getString(mContext,R.string.D4),
+                StringUtils.getString(mContext,R.string.D5),
+                StringUtils.getString(mContext,R.string.D6)
+                ));
 
         niceSpinner1.attachDataSource(dataset1);
         niceSpinner2.attachDataSource(dataset2);
         niceSpinner3.attachDataSource(dataset3);
         niceSpinner4.attachDataSource(dataset4);
+        setSpinnerListener(niceSpinner1);
+        setSpinnerListener(niceSpinner2);
+        setSpinnerListener(niceSpinner3);
+        setSpinnerListener(niceSpinner4);
 
         mBtGoto.setTextColor(ColorStateListMaker.createColorStateList(
                 getResources().getColor(R.color.colorPrimary),
@@ -80,15 +127,10 @@ public class MapFragment extends Fragment {
                 getResources().getColor(R.color.colorPrimary)
         ));
 
-        setSpinnerListener(niceSpinner1);
-        setSpinnerListener(niceSpinner2);
-        setSpinnerListener(niceSpinner3);
-        setSpinnerListener(niceSpinner4);
-
         mBtGoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().startActivity(new Intent(mContext, MapsActivity.class));
+                getActivity().startActivity(new Intent(mContext, MapsActivity.class).putExtra("Location",mBtResult.getText().toString()));
             }
         });
         locationConfig = new LocationConfig(mContext);
@@ -106,13 +148,17 @@ public class MapFragment extends Fragment {
         spinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
             @Override
             public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
-                String item = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(mContext,"Your choice:"+item,Toast.LENGTH_LONG).show();
-                mBtResult.setText(item);
+                if(0 == position){
+                    Toast.makeText(mContext,mContext.getResources().getString(R.string.select_again),Toast.LENGTH_LONG).show();
+                }else {
+                    String item = String.valueOf(parent.getItemAtPosition(position));
+                    Toast.makeText(mContext,"Your choice: "+item ,Toast.LENGTH_LONG).show();
+                    mBtResult.setText(item);
+                }
             }
         });
-
     }
-    
+
+
 
 }

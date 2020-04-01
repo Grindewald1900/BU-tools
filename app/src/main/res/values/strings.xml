@@ -23,6 +23,49 @@
     <string name="lon_main">lon_main</string>
     <string name="lat_main">lat_main</string>
 
+    <string name="A1">1-Astronomical Observatory</string>
+    <string name="A2">2-Bandeen Hall</string>
+    <string name="A3">3-Library Learning Commons</string>
+    <string name="A4">4-Centennial Theatre</string>
+    <string name="A5">5-Champlain College (CEGEP)</string>
+    <string name="A6">6-Cormier Centre (Dobson-Lagasse)</string>
+    <string name="A7">7-Bishop Williams Hall</string>
+    <string name="A8">8-Foreman Art Gallery</string>
+    <string name="A9">9-Hamilton Building</string>
+    <string name="A10">10-Johnson Science Building</string>
+    <string name="A11">11-Marjorie Donald House (The SUB)</string>
+    <string name="A12">12-McGreer (Administration - Academic Offices)</string>
+    <string name="A13">13-Molson Fine Arts Building</string>
+    <string name="A14">14-Morris House</string>
+    <string name="A15">15-Nicolls Arts Building</string>
+    <string name="A16">16-Turner Studio Theatre</string>
+
+    <string name="B1">1-Buildings and Grounds</string>
+    <string name="B2">2-Coulter Field</string>
+    <string name="B3">3-Golf Course</string>
+    <string name="B4">4-Hangar</string>
+    <string name="B5">5-Health Services</string>
+    <string name="B6">6-John H. Price Sports Centre</string>
+    <string name="B7">7-Panda Daycare</string>
+    <string name="B8">8-Security</string>
+    <string name="B9">9-St. Mark\'s Chapel</string>
+    <string name="B10">10-University Bookstore</string>
+    <string name="B11">11-W.B. Scott Arena and Outdoor Pool</string>
+
+    <string name="C1">1-Adam\'s Dining Room</string>
+    <string name="C2">2-Dewhurst Dining Hall</string>
+    <string name="C3">3-The Bus Stop Cafe</string>
+    <string name="C4">4-Tim Horton\'s</string>
+    <string name="C5">5-Gaiter Grill and Quiznos</string>
+    <string name="C6">6-Sport Center Coffee Shop</string>
+
+    <string name="D1">1-Abbott Residence</string>
+    <string name="D2">2-Kuehner Residence</string>
+    <string name="D3">3-Mackinnon Residence</string>
+    <string name="D4">4-Munster Residence</string>
+    <string name="D5">5-Norton Pollack Residence</string>
+    <string name="D6">6-Paterson Hall</string>
+
     <!-- Others -->
     <string name="home_second">Home Second</string>
     <string name="demo_user_mail">yren@ubishops.ca</string>
@@ -34,6 +77,8 @@
     <string name="permission_fail">Fail!</string>
     <string name="select_location">Select a location ↓</string>
     <string name="No_destination">No destination chosen</string>
+    <string name="select_again">Please select a valid destination!</string>
+    <string name="get_direction">Get direction →</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
