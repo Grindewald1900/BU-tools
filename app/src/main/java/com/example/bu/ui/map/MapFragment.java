@@ -24,6 +24,7 @@ import com.example.bu.activity.MapsActivity;
 import com.example.bu.tool.ColorStateListMaker;
 import com.example.bu.tool.LocationConfig;
 import com.example.bu.tool.StringUtils;
+import com.example.bu.tool.ToastUtils;
 import com.qmuiteam.qmui.widget.dialog.QMUIBottomSheetListItemView;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
@@ -44,6 +45,7 @@ public class MapFragment extends Fragment {
     private QMUIBottomSheetListItemView bottomSheetListItemView;
     private QMUIRoundButton mBtGoto,mBtResult;
     private NiceSpinner niceSpinner1,niceSpinner2,niceSpinner3,niceSpinner4;
+    private Boolean isChosen = false;
 
     public static MapFragment newInstance() {
         return new MapFragment();
@@ -130,7 +132,11 @@ public class MapFragment extends Fragment {
         mBtGoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().startActivity(new Intent(mContext, MapsActivity.class).putExtra("Location",mBtResult.getText().toString()));
+                if(isChosen){
+                    getActivity().startActivity(new Intent(mContext, MapsActivity.class).putExtra("Location",mBtResult.getText().toString()));
+                }else {
+                    Toast.makeText(mContext,mContext.getResources().getString(R.string.select_again),Toast.LENGTH_LONG).show();
+                }
             }
         });
         locationConfig = new LocationConfig(mContext);
@@ -149,8 +155,10 @@ public class MapFragment extends Fragment {
             @Override
             public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
                 if(0 == position){
+                    isChosen = false;
                     Toast.makeText(mContext,mContext.getResources().getString(R.string.select_again),Toast.LENGTH_LONG).show();
                 }else {
+                    isChosen = true;
                     String item = String.valueOf(parent.getItemAtPosition(position));
                     Toast.makeText(mContext,"Your choice: "+item ,Toast.LENGTH_LONG).show();
                     mBtResult.setText(item);

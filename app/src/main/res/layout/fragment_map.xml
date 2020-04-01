@@ -65,7 +65,7 @@
 
     <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
         android:id="@+id/bt_map_result"
-        android:layout_width="@dimen/dimen_button_width"
+        android:layout_width="@dimen/dimen_240"
         android:layout_height="@dimen/dimen_50"
         android:text="@string/No_destination"
         android:textColor="@color/purple_1"

@@ -18,6 +18,7 @@
 
     <!-- Key -->
     <string name="google_map_key">AIzaSyCHFbT6FOwbqaEMQVSQzr0hWag7ovhsPBI</string>
+    <string name="google_direction_webService_key">AIzaSyBQFKZ0hDgbeLvp5DecaJ_PvNL2ADaOoKg</string>
 
     <!-- Location -->
     <string name="lon_main">lon_main</string>
@@ -79,6 +80,12 @@
     <string name="No_destination">No destination chosen</string>
     <string name="select_again">Please select a valid destination!</string>
     <string name="get_direction">Get direction →</string>
+    <string name="fail_location">Failed to get your location, please try again</string>
+    <string name="no_permission">No permission, please grant permissions in Settings</string>
+    <string name="change_trans_mode">Transport Mode: Walking</string>
+    <string name="change_trans_mode2">Transport Mode: Driving</string>
+    <string name="change_trans_mode3">Transport Mode: Bicycling</string>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->
