@@ -37,6 +37,7 @@ dependencies {
     implementation 'com.yanzhenjie:permission:2.0.3'
     implementation 'com.github.arcadefire:nice-spinner:1.4.4'
     implementation 'com.akexorcist:google-direction-library:1.2.0'
+    implementation 'com.leon:lsettingviewlibrary:1.7.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

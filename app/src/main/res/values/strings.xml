@@ -16,6 +16,9 @@
     <string name="tool_moodle">MOODLE</string>
     <string name="tool_mybu">My BU</string>
     <string name="tool_mail">Web Mail</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_color">Theme Colors</string>
+    <string name="setting_about">About Us</string>
 
 
     <!-- URL -->
@@ -26,6 +29,8 @@
     <string name="url_bu_moodle">https://moodle.ubishops.ca/</string>
     <string name="url_bu_mybu">https://mybu.ubishops.ca/</string>
     <string name="url_bu_webmail">http://webmail.ubishops.ca/owa/</string>
+    <string name="url_bu_contact">https://www.ubishops.ca/contact-us/</string>
+    <string name="url_about_us">https://github.com/Grindewald1900/BU-tools</string>
 
     <!-- Key -->
     <string name="google_map_key">AIzaSyCHFbT6FOwbqaEMQVSQzr0hWag7ovhsPBI</string>

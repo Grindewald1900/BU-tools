@@ -10,10 +10,13 @@
     <dimen name="text_size_20">20sp</dimen>
     <dimen name="dimen_button_width">200dp</dimen>
     <dimen name="dimen_button_height">80dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
     <dimen name="dimen_20">20dp</dimen>
     <dimen name="dimen_30">30dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
     <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_135">135dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
     <dimen name="dimen_240">240dp</dimen>
 </resources>

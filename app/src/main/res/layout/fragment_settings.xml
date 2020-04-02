@@ -1,13 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.settings.SettingsFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <ImageView
+        android:id="@+id/iv_setting_one"
+        android:layout_width="@dimen/dimen_50"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:src="@drawable/icon_language"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_setting_1"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_50"
+        android:text="@string/setting_language"
+        android:textColor="@color/qmui_config_color_white"
+        android:textSize="@dimen/qmui_btn_text_size"
+        android:layout_marginLeft="@dimen/dimen_20"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="@id/iv_setting_one"
+        app:layout_constraintLeft_toRightOf="@id/iv_setting_one"
+        />
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_setting_1"
+        android:layout_width="@dimen/dimen_135"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginLeft="@dimen/dimen_20"
+        app:layout_constraintLeft_toRightOf="@id/bt_setting_1"
+        app:layout_constraintTop_toTopOf="@id/bt_setting_1"
+        />
 
-</FrameLayout>
+    <View
+        android:id="@+id/view_setting_1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        app:layout_constraintTop_toBottomOf="@id/iv_setting_one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_setting_two"
+        android:layout_width="@dimen/dimen_50"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:src="@drawable/icon_color"
+        app:layout_constraintTop_toBottomOf="@id/view_setting_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_setting_2"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_50"
+        android:text="@string/setting_color"
+        android:textColor="@color/qmui_config_color_white"
+        android:textSize="@dimen/qmui_btn_text_size"
+        android:layout_marginLeft="@dimen/dimen_20"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="@id/iv_setting_two"
+        app:layout_constraintLeft_toRightOf="@id/iv_setting_one"
+        />
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/spin_setting_2"
+        android:layout_width="@dimen/dimen_135"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginLeft="@dimen/dimen_20"
+        app:layout_constraintLeft_toRightOf="@id/bt_setting_1"
+        app:layout_constraintTop_toTopOf="@id/bt_setting_2"
+        />
+    <View
+        android:id="@+id/view_setting_2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        app:layout_constraintTop_toBottomOf="@id/iv_setting_two"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_setting_three"
+        android:layout_width="@dimen/dimen_50"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:src="@drawable/icon_about_us"
+        app:layout_constraintTop_toBottomOf="@id/view_setting_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/bt_setting_3"
+        android:layout_width="@dimen/dimen_150"
+        android:layout_height="@dimen/dimen_50"
+        android:text="@string/setting_about"
+        android:textColor="@color/qmui_config_color_white"
+        android:textSize="@dimen/qmui_btn_text_size"
+        android:layout_marginLeft="@dimen/dimen_20"
+        app:qmui_borderColor="@color/qmui_config_color_white"
+        app:qmui_backgroundColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="@id/iv_setting_three"
+        app:layout_constraintLeft_toRightOf="@id/iv_setting_one"
+        />
+
+    <View
+        android:id="@+id/view_setting_3"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        app:layout_constraintTop_toBottomOf="@id/iv_setting_three"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

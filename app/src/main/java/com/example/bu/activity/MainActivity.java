@@ -1,6 +1,7 @@
 package com.example.bu.activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bu.R;
+import com.example.bu.tool.WebviewUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -39,6 +41,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Context mContext;
     private AppBarConfiguration mAppBarConfiguration;
     private ImageView iv_main_profile;
     private TextView tv_main_profile;
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mContext = this;
         welcomeHelper = new WelcomeHelper(this,StartActivity.class);
         welcomeHelper.show(savedInstanceState);
         initView();
@@ -106,8 +109,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                WebviewUtils.openWebview(getResources().getString(R.string.url_bu_contact),mContext);
             }
         });
         // Passing each menu ID as a set of Ids because each
