@@ -77,20 +77,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Log.e("BU","onNavigationItemSelected:"+item.getItemId());
-                switch (item.getItemId()){
-                    case Menu.FIRST:
-                        tv_main_profile.setText("a");
-//                        Toast.makeText(this,"AA",Toast.LENGTH_LONG).show();
-                        break;
-                    case Menu.FIRST + 1:
-                        tv_main_profile.setText("a");
-//                        Toast.makeText(this,"BB",Toast.LENGTH_LONG).show();
-                        break;
-                    case Menu.FIRST + 2:
-                        tv_main_profile.setText("a");
-//                        Toast.makeText(this,"CC",Toast.LENGTH_LONG).show();
-                        break;
-                }
+//                switch (item.getItemId()){
+//                    case Menu.FIRST:
+//                        tv_main_profile.setText("a");
+////                        Toast.makeText(this,"AA",Toast.LENGTH_LONG).show();
+//                        break;
+//                    case Menu.FIRST + 1:
+//                        tv_main_profile.setText("a");
+////                        Toast.makeText(this,"BB",Toast.LENGTH_LONG).show();
+//                        break;
+//                    case Menu.FIRST + 2:
+//                        tv_main_profile.setText("a");
+////                        Toast.makeText(this,"CC",Toast.LENGTH_LONG).show();
+//                        break;
+//                }
                 return true;
             }
         });
@@ -113,8 +113,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_map, R.id.nav_sports,R.id.nav_tools)
-
+                R.id.nav_home, R.id.nav_map, R.id.nav_sports,R.id.nav_tools,R.id.nav_settings)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

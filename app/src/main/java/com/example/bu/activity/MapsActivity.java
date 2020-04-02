@@ -66,11 +66,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private String locationName, serviceName, provider;
     private LocationManager locationManager;
     private Context mContext;
-    private Marker start, end;
-    private double myLon, myLat;
+    private double myLon, myLat, lon, lat;
     private QMUIRoundButton mBtChangeMode;
     private QMUIPopup popup;
     private LatLng me, bu;
+    private BitmapDescriptor bitmapDescriptor,bitmapDescriptor2;
 //    private ConstraintLayout layout;
 
 
@@ -121,16 +121,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        double lat = Double.parseDouble(Objects.requireNonNull(appPreferences.getString(locationName+"Lat", "45.364387")));
-        double lon = Double.parseDouble(Objects.requireNonNull(appPreferences.getString(locationName+"Lon","-71.845109")));
-        BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.icon_location_64);
-        BitmapDescriptor bitmapDescriptor2 = BitmapDescriptorFactory.fromResource(R.drawable.icon_me_64);
+        lat = Double.parseDouble(Objects.requireNonNull(appPreferences.getString(locationName+"Lat", "45.364387")));
+        lon = Double.parseDouble(Objects.requireNonNull(appPreferences.getString(locationName+"Lon","-71.845109")));
+        bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.icon_location_64);
+        bitmapDescriptor2 = BitmapDescriptorFactory.fromResource(R.drawable.icon_me_64);
 
         bu = new LatLng(lat, lon);
         me = new LatLng(myLat, myLon);
-        start = mMap.addMarker(new MarkerOptions().position(me).icon(bitmapDescriptor2));
-        mMap.addMarker(new MarkerOptions().position(bu).title(locationName).snippet("Lon:"+lon+" Lat:"+lat).icon(bitmapDescriptor)).showInfoWindow();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bu,16.0f));
+
 
         // Walking as default
         direction(me,bu,TransportMode.WALKING,R.color.colorPrimary);
@@ -138,6 +136,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void direction(LatLng start, LatLng end, String mode,int color){
+        mMap.clear();
+        mMap.addMarker(new MarkerOptions().position(me).icon(bitmapDescriptor2));
+        mMap.addMarker(new MarkerOptions().position(bu).title(locationName).snippet("Lon:"+lon+" Lat:"+lat).icon(bitmapDescriptor)).showInfoWindow();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bu,16.0f));
         GoogleDirection.withServerKey(getResources().getString(R.string.google_direction_webService_key))
                 .from(start)
                 .to(end)

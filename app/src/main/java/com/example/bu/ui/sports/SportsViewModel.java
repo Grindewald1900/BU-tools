@@ -10,7 +10,6 @@ public class SportsViewModel extends ViewModel {
 
     public SportsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
     }
 
     public LiveData<String> getText() {

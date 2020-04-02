@@ -10,7 +10,6 @@
         android:name="com.example.bu.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
-
     </fragment>
 
     <fragment
@@ -30,4 +29,11 @@
         android:name="com.example.bu.ui.tool.ToolsFragment"
         android:label="@string/menu_tools"
         tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.bu.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
 </navigation>

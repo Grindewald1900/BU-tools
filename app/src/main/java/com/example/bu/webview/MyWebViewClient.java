@@ -1,5 +1,7 @@
 package com.example.bu.webview;
 
+import android.os.Build;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebViewClient;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +17,13 @@ public class MyWebViewClient extends WebViewClient {
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         view.getContext().startActivity(intent);
-        return true;
+        return false;
     }
+
+    @Override
+    public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request)
+    {
+        return false;
+    }
+
 }

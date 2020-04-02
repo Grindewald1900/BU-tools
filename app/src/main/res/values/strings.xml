@@ -9,12 +9,23 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_map">Map</string>
-    <string name="menu_sports">sports</string>
-    <string name="menu_tools">tools</string>
+    <string name="menu_sports">Gym schedule</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_settings">Settings</string>
+    <string name="tool_directory">BU directory</string>
+    <string name="tool_moodle">MOODLE</string>
+    <string name="tool_mybu">My BU</string>
+    <string name="tool_mail">Web Mail</string>
 
 
     <!-- URL -->
+    <string name="URL">url</string>
     <string name="url_bu_main">www.ubishops.ca/</string>
+    <string name="url_bu_schedule">buy.gaiters.ca/Facility/GetSchedule</string>
+    <string name="url_bu_directory">https://www.ubishops.ca/bu-directory/</string>
+    <string name="url_bu_moodle">https://moodle.ubishops.ca/</string>
+    <string name="url_bu_mybu">https://mybu.ubishops.ca/</string>
+    <string name="url_bu_webmail">http://webmail.ubishops.ca/owa/</string>
 
     <!-- Key -->
     <string name="google_map_key">AIzaSyCHFbT6FOwbqaEMQVSQzr0hWag7ovhsPBI</string>
@@ -85,7 +96,6 @@
     <string name="change_trans_mode">Transport Mode: Walking</string>
     <string name="change_trans_mode2">Transport Mode: Driving</string>
     <string name="change_trans_mode3">Transport Mode: Bicycling</string>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->
