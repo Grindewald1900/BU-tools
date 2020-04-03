@@ -14,68 +14,55 @@ Yi Ren   Wentao Lu
 
 ## Screenshots  
 **Welcome page**  
-<center>
-<figure>
-<img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="300" />
-·
-·
-·
-<img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="300" />
-</figure>
-</center>
-
-<center class="half">
-    <img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="200"/>
-    <img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="200"/>
-    <img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="200"/>
-</center>
-<div><img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="40%" height="30%"> <img src="http://15.222.11.163/wp-content/uploads/2020/03/s8.png" width="40%" height="30%">
-</div>  
-<div><img src="http://15.222.11.163/wp-content/uploads/2020/03/s8.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s7.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s9.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s8.png" width="30%" height="30%"></div>  
+<br></br>
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s9.png" width="30%" height="30%"></div>  
+<br></br>
 
 **Main page**  
 
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s1.png" width="40%" height="30%"></div>   
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/03/s1.png" width="30%" height="30%"></div>   
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s22.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s31.png" width="30%" height="30%"></div>  
 <br></br>
 
 **Login & Register page**  
 
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s30.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s32.png" width="30%" height="30%"></div>  
 <br></br>
-
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s33.png" width="30%" height="30%"></div>  
+<br></br>
 **Campus map direction**  
 
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s15.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s15.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s16.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s16.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s17.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s17.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s19.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s19.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s20.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s20.png" width="30%" height="30%"></div>  
 <br></br>
 
 **Gym schedule**
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s24.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s24.png" width="30%" height="30%"></div>  
 <br></br>
 
 **Other tools**  
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s25.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s25.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s26.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s26.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s27.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s27.png" width="30%" height="30%"></div>  
 <br></br>
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s29.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s29.png" width="30%" height="30%"></div>  
 <br></br>
 
 **Settings**
-<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s23.png" width="40%" height="30%"></div>  
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s23.png" width="30%" height="30%"></div>  
 <br></br>
 
 
