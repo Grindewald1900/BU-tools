@@ -2,12 +2,14 @@ package com.example.bu.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bu.R;
@@ -15,8 +17,10 @@ import com.example.bu.tool.HttpLogin;
 import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 
 public class LoginActivity extends AppCompatActivity {
+    private Context mContext;
     private QMUIRoundButton mBtnLogin;
     private EditText etName, etPwd;
+    private TextView tvForget, tvRegister;
 
     private final static int LOGIN_JUDGE = 1;
     private int RequestCode = 1;
@@ -26,17 +30,28 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mContext = this;
         initView();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1&&resultCode==2){
-            etName.setText(data.getStringExtra("id"));
-            etPwd.setText(data.getStringExtra("password"));
+        switch (resultCode){
+            case 1:
+                Toast.makeText(mContext,getResources().getString(R.string.reg_success),Toast.LENGTH_LONG).show();
+                etName.setText(data.getStringExtra("id"));
+                etPwd.setText(data.getStringExtra("password"));
+                break;
+            case 2:
+                Toast.makeText(mContext,getResources().getString(R.string.reg_fail),Toast.LENGTH_LONG).show();
+                break;
+            default:
+                Toast.makeText(mContext,getResources().getString(R.string.network_err),Toast.LENGTH_LONG).show();
+                break;
         }
     }
+
 
     Handler handler = new Handler(){
         @Override
@@ -50,8 +65,12 @@ public class LoginActivity extends AppCompatActivity {
                     //Toast.makeText(MainActivity.this,result,Toast.LENGTH_SHORT).show();
                     try {
                         if (result.equals("success")) {
-                            Toast.makeText(LoginActivity.this,"登录成功！", Toast.LENGTH_SHORT).show();
+                            String s = etName.getText().toString();
+                            setResult(1,new Intent().putExtra("name",etName.getText().toString()));
+                        }else {
+                            setResult(2,new Intent().putExtra("name",getResources().getString(R.string.click_sign)));
                         }
+                        finish();
                     }catch (NullPointerException e){
                         e.printStackTrace();
                     }
@@ -66,6 +85,8 @@ public class LoginActivity extends AppCompatActivity {
         mBtnLogin = findViewById(R.id.bt_login_sign);
         etName = findViewById(R.id.et_login_name);
         etPwd = findViewById(R.id.et_login_pwd);
+        tvForget = findViewById(R.id.tv_login_forget);
+        tvRegister = findViewById(R.id.tv_login_register);
 
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        //使用下面类里的函数，连接servlet，返回一个result，使用handler处理这个result
                         String result = HttpLogin.LoginByPost(etName.getText().toString(),etPwd.getText().toString());
                         Bundle bundle = new Bundle();
                         bundle.putString("result",result);
@@ -83,6 +103,13 @@ public class LoginActivity extends AppCompatActivity {
                         handler.sendMessage(message);
                     }
                 }).start();
+            }
+        });
+
+        tvRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(mContext,RegisterActivity.class),1);
             }
         });
     }

@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 
 public class HttpLogin {
     public static String LoginByPost(String id,String password){
-        String address = "http://localhost:8080/Bu_Server_war_exploded/login.do";
+        String address = "http://10.0.2.2:8080/BU_war_exploded/LoginServlet.do";
         String result = "";
         try{
             URL url = new URL(address);//初始化URL
@@ -32,7 +32,6 @@ public class HttpLogin {
                     "&password="+ URLEncoder.encode(password,"UTF-8");
             Log.e("BU",data);
 
-
             //获取输出流
             OutputStream out = conn.getOutputStream();
 
@@ -42,6 +41,7 @@ public class HttpLogin {
             conn.connect();
 
             Log.e("BU","Conn_code:"+conn.getResponseCode());
+            Log.e("BU","Conn_message:"+conn.getResponseMessage());
             if (conn.getResponseCode() == 200) {
                 // 获取响应的输入流对象
                 InputStream is = conn.getInputStream();
@@ -75,8 +75,7 @@ public class HttpLogin {
     }
 
     public static String RegisterByPost(String id,String password,String email){
-        String address = "http://localhost:8080/Bu_Server_war_exploded/login.do";
-        String address2 = "http://www.khqust.top/MyWebsite/androidregister.do";
+        String address = "http://10.0.2.2:8080/BU_war_exploded/RegisterServlet.do";
         String result = "";
 
         try{
@@ -95,6 +94,7 @@ public class HttpLogin {
             String data = "id="+ URLEncoder.encode(id,"UTF-8")+
                     "&password="+ URLEncoder.encode(password,"UTF-8")+
                     "&email="+ URLEncoder.encode(email,"UTF-8");
+            Log.e("BU","reg" + data);
 
             //获取输出流
             OutputStream out = conn.getOutputStream();
@@ -103,7 +103,8 @@ public class HttpLogin {
             out.flush();
             out.close();
             conn.connect();
-
+            Log.e("BU","Conn_code2:"+conn.getResponseCode());
+            Log.e("BU","Conn_message2:"+conn.getResponseMessage());
             if (conn.getResponseCode() == 200) {
                 // 获取响应的输入流对象
                 InputStream is = conn.getInputStream();
@@ -123,6 +124,7 @@ public class HttpLogin {
                 message.close();
                 // 返回字符串
                 result = new String(message.toByteArray());
+                Log.e("BU","reg"+result);
                 //return result;
             }
 

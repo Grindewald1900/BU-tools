@@ -26,9 +26,22 @@
     <string name="different_login">or</string>
     <string name="name">Name</string>
     <string name="password"> Pwd</string>
-    <string name="sign">SING IN</string>
+    <string name="password1">Password</string>
+    <string name="password2">Repeat your password</string>
+    <string name="email">Email address</string>
+    <string name="email1">Email</string>
+    <string name="sign">LOGIN</string>
+    <string name="privacy">Privacy agreement</string>
+    <string name="contact_us">Contact us</string>
     <string name="google">SIGN IN WITH GOOGLE</string>
     <string name="facebook">FACEBOOK</string>
+    <string name="login_success">Login successfully!</string>
+    <string name="reg_success">Register successfully!</string>
+    <string name="login_fail">login_failed!</string>
+    <string name="reg_fail">Register failed!</string>
+    <string name="check_pwd">Two different passwords, check again! </string>
+    <string name="check_email">Please input a valid email address!</string>
+    <string name="network_err">Network error!</string>
 
 
     <!-- URL -->

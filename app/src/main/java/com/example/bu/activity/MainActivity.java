@@ -26,6 +26,7 @@ import com.yanzhenjie.permission.runtime.Permission;
 import com.yanzhenjie.permission.runtime.PermissionDef;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.app.ActivityCompat;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         tv_main_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext,LoginActivity.class));
+                startActivityForResult(new Intent(mContext,LoginActivity.class),1);
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tv_main_profile.setText("yren@ubishops.ca");
+        tv_main_profile.setText(getResources().getString(R.string.click_sign));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +130,26 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(null != data){
+            String result = data.getStringExtra("name");
+            tv_main_profile.setText(result);
+            switch (resultCode){
+                case 1:
+                    Toast.makeText(mContext,getResources().getString(R.string.login_success), Toast.LENGTH_SHORT).show();
+                    tv_main_profile.setClickable(false);
+                    break;
+                case 2:
+                    Toast.makeText(mContext,getResources().getString(R.string.login_fail), Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     @Override
