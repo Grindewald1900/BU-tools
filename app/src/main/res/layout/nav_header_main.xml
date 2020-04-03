@@ -43,8 +43,9 @@
             android:layout_gravity="bottom"
             android:textColor="@color/qmui_config_color_black"
             android:textSize="@dimen/text_size_20"
-            android:text="@string/demo_user_mail" />
-    </LinearLayout>>
-
+            android:text="@string/click_sign"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
 
 </LinearLayout>
