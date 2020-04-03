@@ -27,6 +27,11 @@ Yi Ren   Wentao Lu
 <div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s22.png" width="40%" height="30%"></div>  
 <br></br>
 
+**Login & Register page**  
+
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s30.png" width="40%" height="30%"></div>  
+<br></br>
+
 **Campus map direction**  
 
 <div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s15.png" width="40%" height="30%"></div>  
