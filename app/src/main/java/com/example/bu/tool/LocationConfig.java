@@ -42,31 +42,31 @@ public class LocationConfig {
         addLocation(R.string.A15,"-71.847384","45.366192");
         addLocation(R.string.A16,"-71.847722","45.364826");
 
-        addLocation(R.string.B1,"-71.847621","45.366264");
-        addLocation(R.string.B2,"-71.847621","45.366264");
-        addLocation(R.string.B3,"-71.847621","45.366264");
-        addLocation(R.string.B4,"-71.847621","45.366264");
-        addLocation(R.string.B5,"-71.847621","45.366264");
-        addLocation(R.string.B6,"-71.847621","45.366264");
-        addLocation(R.string.B7,"-71.847621","45.366264");
-        addLocation(R.string.B8,"-71.847621","45.366264");
-        addLocation(R.string.B9,"-71.847621","45.366264");
-        addLocation(R.string.B10,"-71.847621","45.366264");
-        addLocation(R.string.B11,"-71.847621","45.366264");
+        addLocation(R.string.B1,"-71.848070","45.364861");
+        addLocation(R.string.B2,"-71.842495","45.365413");
+        addLocation(R.string.B3,"-71.846570","45.359819");
+        addLocation(R.string.B4,"-71.842602","45.361925");
+        addLocation(R.string.B5,"-71.842457","45.363444");
+        addLocation(R.string.B6,"-71.841717","45.363998");
+        addLocation(R.string.B7,"-71.843657","45.365304");
+        addLocation(R.string.B8,"-71.363676","45.363676");
+        addLocation(R.string.B9,"-71.849005","45.365988");
+        addLocation(R.string.B10,"-71.846528","45.365195");
+        addLocation(R.string.B11,"-71.847210","45.363811");
 
-        addLocation(R.string.C1,"-71.847621","45.366264");
-        addLocation(R.string.C2,"-71.847621","45.366264");
-        addLocation(R.string.C3,"-71.847621","45.366264");
-        addLocation(R.string.C4,"-71.847621","45.366264");
-        addLocation(R.string.C5,"-71.847621","45.366264");
-        addLocation(R.string.C6,"-71.847621","45.366264");
+        addLocation(R.string.C1,"-71.844352","45.363673");
+        addLocation(R.string.C2,"-71.844274","45.363511");
+        addLocation(R.string.C3,"-71.847625","45.366342");
+        addLocation(R.string.C4,"-71.846511","45.365004");
+        addLocation(R.string.C5,"-71.846162","45.365017");
+        addLocation(R.string.C6,"-71.841248","45.363859");
 
-        addLocation(R.string.D1,"-71.847621","45.366264");
-        addLocation(R.string.D2,"-71.847621","45.366264");
-        addLocation(R.string.D3,"-71.847621","45.366264");
-        addLocation(R.string.D4,"-71.847621","45.366264");
-        addLocation(R.string.D5,"-71.847621","45.366264");
-        addLocation(R.string.D6,"-71.847621","45.366264");
+        addLocation(R.string.D1,"-71.844929","45.363331");
+        addLocation(R.string.D2,"-71.843540","45.363274");
+        addLocation(R.string.D3,"-71.845026","45.364295");
+        addLocation(R.string.D4,"-71.844232","45.362863");
+        addLocation(R.string.D5,"-71.847939","45.365377");
+        addLocation(R.string.D6,"-71.843838","45.362243");
 
 
 
