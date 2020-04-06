@@ -15,6 +15,12 @@ Yi Ren   Wentao Lu
 
 **(4) Other useful tools, such as moodle, mybu and our webmail.**
 
+**Video demo:**  
+http://15.222.11.163/wp-content/uploads/2020/04/BU-tools-demo1.mp4  
+http://15.222.11.163/wp-content/uploads/2020/04/BU-tools-demo2.mp4  
+  
+**Refer to Github for more details.**  
+https://github.com/Grindewald1900/BU-tools  
 
 ## Have a try on version 1.0
 **Scan the QR code**  
