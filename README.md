@@ -62,6 +62,8 @@ Yi Ren   Wentao Lu
 <br></br>
 <div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s20.png" width="30%" height="30%"></div>  
 <br></br>
+<div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s34.png" width="30%" height="30%"></div>  
+<br></br>
 
 **Gym schedule**
 <div align=center><img src="http://15.222.11.163/wp-content/uploads/2020/04/s24.png" width="30%" height="30%"></div>  
